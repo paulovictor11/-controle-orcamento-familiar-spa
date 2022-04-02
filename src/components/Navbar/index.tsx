@@ -13,9 +13,11 @@ import {
     useDisclosure,
     Stack,
     Heading,
+    useColorMode,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { NavLink } from './NavLink';
+import { BsSun, BsMoonStarsFill } from 'react-icons/bs';
 import Link from 'next/link';
 
 interface INavLink {
@@ -25,14 +27,14 @@ interface INavLink {
 
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const { colorMode, toggleColorMode } = useColorMode();
 
     const links: INavLink[] = [
         { title: 'Resume', path: '/' },
         { title: 'Incomes', path: '/incomes' },
         { title: 'Expenses', path: '/expenses' },
     ];
-    const profileAvatar =
-        'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9';
+    const profileAvatar = 'https://github.com/paulovictor11.png';
 
     const HamburgerMenu = () => {
         return (
@@ -71,6 +73,14 @@ const Navbar = () => {
     const NavRight = () => {
         return (
             <Flex alignItems={'center'}>
+                {/* <Button
+                    mr="4"
+                    aria-label="Toggle Color Mode"
+                    onClick={toggleColorMode}
+                    _focus={{ boxShadow: 'none' }}>
+                    {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
+                </Button> */}
+
                 <Menu>
                     <MenuButton
                         as={Button}

@@ -17,7 +17,7 @@ const Menu = () => {
     return (
         <Flex direction="row">
             <Spacer />
-            <Stack pb="3">
+            <Stack pb="4">
                 <InputGroup size="md">
                     <Input
                         width={'400px'}
@@ -31,6 +31,7 @@ const Menu = () => {
                         <IconButton
                             aria-label="Search database"
                             backgroundColor="purple.500"
+                            _hover={{ backgroundColor: 'purple.600' }}
                             icon={<SearchIcon />}
                         />
                     </InputRightElement>

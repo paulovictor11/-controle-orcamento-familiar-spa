@@ -11,6 +11,7 @@ import {
 import Divider from '../src/components/Divider';
 import Head from 'next/head';
 import Link from 'next/link';
+import { BsGoogle } from 'react-icons/bs';
 
 const SignIn: NextPage = () => {
     return (
@@ -109,7 +110,8 @@ const SignIn: NextPage = () => {
                             backgroundColor="gray.600"
                             marginLeft={6}
                             borderRadius="sm"
-                            _hover={{ backgroundColor: 'purple.500' }}>
+                            _hover={{ backgroundColor: 'purple.500' }}
+                            leftIcon={<BsGoogle />}>
                             Google
                         </Button>
                     </Flex>
