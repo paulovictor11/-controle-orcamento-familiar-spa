@@ -8,7 +8,7 @@ type CardProps = {
 
 const Card = ({ children, widht = 'full' }: CardProps) => {
     return (
-        <Center py={2}>
+        <Center py={4}>
             <Box
                 w={widht}
                 bg={useColorModeValue('white', 'gray.600')}
