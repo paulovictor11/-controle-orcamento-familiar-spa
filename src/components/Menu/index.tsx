@@ -25,6 +25,7 @@ const Menu = () => {
                         type="text"
                         placeholder="Chave de autenticação"
                         backgroundColor="gray.600"
+                        focusBorderColor="purple.500"
                         ref={searchInputRef}
                     />
                     <InputRightElement>

@@ -15,8 +15,11 @@ const Card = ({ children, widht = 'full' }: CardProps) => {
                 boxShadow={'2xl'}
                 rounded={'md'}
                 overflow={'hidden'}
-                padding="4">
-                {children}
+                padding="4"
+            >
+                <Center>
+                    {children}
+                </Center>
             </Box>
         </Center>
     );
