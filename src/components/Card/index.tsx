@@ -1,27 +1,26 @@
 import { ReactNode } from 'react';
-import { Box, Center, useColorModeValue } from '@chakra-ui/react';
+import { Box, BoxProps, Center, useColorModeValue } from '@chakra-ui/react';
 
-type CardProps = {
+type CardProps = BoxProps & {
     children: ReactNode;
-    widht?: string;
+    width?: string;
+    marginY?: number;
 };
 
-const Card = ({ children, widht = 'full' }: CardProps) => {
+const Card = ({ children, width = 'full', marginY = 6, ...props }: CardProps) => {
     return (
-        <Center py={4}>
-            <Box
-                w={widht}
-                bg={useColorModeValue('white', 'gray.600')}
-                boxShadow={'2xl'}
-                rounded={'md'}
-                overflow={'hidden'}
-                padding="4"
-            >
-                <Center>
-                    {children}
-                </Center>
-            </Box>
-        </Center>
+        <Box
+            w={width}
+            bg={useColorModeValue('white', 'gray.600')}
+            boxShadow={'2xl'}
+            rounded={'md'}
+            overflow={'hidden'}
+            padding="6"
+            marginY={marginY}
+            {...props}
+        >
+            {children}
+        </Box>
     );
 };
 

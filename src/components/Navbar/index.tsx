@@ -91,12 +91,14 @@ const Navbar = () => {
                         <Avatar size={'sm'} src={profileAvatar} />
                     </MenuButton>
                     <MenuList>
-                        <MenuItem>My Profile</MenuItem>
+                        <Link href="/profile" passHref>
+                            <MenuItem as="a">My Profile</MenuItem>
+                        </Link>
                         <MenuItem>...</MenuItem>
                         <MenuDivider />
-                        <MenuItem>
-                            <Link href="/signin">Logout</Link>
-                        </MenuItem>
+                        <Link href="/signin" passHref>
+                            <MenuItem as="a">Logout</MenuItem>
+                        </Link>
                     </MenuList>
                 </Menu>
             </Flex>
