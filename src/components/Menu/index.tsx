@@ -11,6 +11,7 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react';
 import { useRef } from 'react';
+import CreateForm from '../../views/Form/create';
 
 const Menu = () => {
     const searchInputRef = useRef<HTMLInputElement>(null);
@@ -44,15 +45,7 @@ const Menu = () => {
                 </InputGroup>
             </Stack>
 
-            <Button
-                ml="3"
-                backgroundColor="purple.500"
-                borderRadius="sm"
-                color="white"
-                _hover={{ backgroundColor: 'purple.600' }}
-                leftIcon={<AddIcon />}>
-                Cadastrar
-            </Button>
+            <CreateForm />
         </Flex>
     );
 };
