@@ -20,10 +20,15 @@ export function NavLink({ path, children }: NavLinkProps) {
                 rounded={'md'}
                 _hover={{
                     textDecoration: 'none',
-                    bg: useColorModeValue('gray.200', 'gray.800'),
-                    color: 'white'
+                    bg: useColorModeValue('purple.200', 'gray.800'),
+                    color: useColorModeValue('black', 'white')
                 }}
-                color={isActive ? "purple.400" : 'whiteAlpha.800'}
+                color={
+                    useColorModeValue(
+                        isActive ? 'purple.500' : '',
+                        isActive ? 'purple.400' : 'whiteAlpha.800'
+                    )
+                }
             >
                 {children}
             </ChakraLink>

@@ -87,13 +87,15 @@ const CardProfile = () => {
                         flex={1}
                         fontSize={'sm'}
                         borderRadius="sm"
-                        _hover={{ backgroundColor: 'purple.600' }}>
+                        color={useColorModeValue('black', 'white')}
+                        _hover={{ backgroundColor: 'purple.600', color: useColorModeValue('white', 'black') }}>
                         Mensagem
                     </Button>
                     <Button
                         flex={1}
                         fontSize={'sm'}
                         borderRadius="sm"
+                        color={useColorModeValue('white', 'black')}
                         backgroundColor="purple.500"
                         _hover={{ backgroundColor: 'purple.600' }}>
                         Seguir

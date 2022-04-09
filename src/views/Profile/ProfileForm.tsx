@@ -1,4 +1,10 @@
-import { Button, Heading, Input, Text } from '@chakra-ui/react';
+import {
+    Button,
+    Heading,
+    Input,
+    Text,
+    useColorModeValue,
+} from '@chakra-ui/react';
 import Card from '../../components/Card';
 
 const ProfileForm = () => {
@@ -8,28 +14,28 @@ const ProfileForm = () => {
                 Editar Perfil
             </Heading>
 
-            <Text mb='8px'>Nome:</Text>
+            <Text mb="8px">Nome:</Text>
             <Input
                 height="45px"
-                backgroundColor="gray.800"
+                backgroundColor={useColorModeValue('gray.200', 'gray.800')}
                 focusBorderColor="purple.500"
                 borderRadius="sm"
                 placeholder="Nome"
                 mb={4}
             />
 
-            <Text mb='8px'>Email:</Text>
+            <Text mb="8px">Email:</Text>
             <Input
                 height="45px"
-                backgroundColor="gray.800"
+                backgroundColor={useColorModeValue('gray.200', 'gray.800')}
                 focusBorderColor="purple.500"
                 borderRadius="sm"
                 placeholder="Email"
             />
 
             <Button
-                as={'a'}
                 marginTop={6}
+                color={useColorModeValue('white', 'black')}
                 backgroundColor="purple.500"
                 width="150px"
                 borderRadius="sm"

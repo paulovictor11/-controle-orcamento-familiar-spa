@@ -31,11 +31,11 @@ const Profile: NextPage = () => {
                             <Text mb='8px'>Você poderá criar uma nova conta futuramente.</Text>
 
                             <Button
-                                as={'a'}
                                 marginTop={6}
                                 backgroundColor="red.500"
                                 width="150px"
                                 borderRadius="sm"
+                                color="black"
                                 _hover={{ backgroundColor: 'red.600' }}
                                 mt={8}>
                                 Deletar

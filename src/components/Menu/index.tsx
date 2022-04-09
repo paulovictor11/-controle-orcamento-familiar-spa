@@ -8,6 +8,7 @@ import {
     InputRightElement,
     Spacer,
     Stack,
+    useColorModeValue,
 } from '@chakra-ui/react';
 import { useRef } from 'react';
 
@@ -24,7 +25,10 @@ const Menu = () => {
                         pr="3rem"
                         type="text"
                         placeholder="Chave de autenticação"
-                        backgroundColor="gray.600"
+                        backgroundColor={useColorModeValue(
+                            'gray.200',
+                            'gray.600'
+                        )}
                         focusBorderColor="purple.500"
                         ref={searchInputRef}
                     />
@@ -32,6 +36,7 @@ const Menu = () => {
                         <IconButton
                             aria-label="Search database"
                             backgroundColor="purple.500"
+                            color={useColorModeValue('white', 'black')}
                             _hover={{ backgroundColor: 'purple.600' }}
                             icon={<SearchIcon />}
                         />
@@ -42,6 +47,7 @@ const Menu = () => {
             <Button
                 ml="3"
                 backgroundColor="purple.500"
+                color={useColorModeValue('white', 'black')}
                 borderRadius="sm"
                 _hover={{ backgroundColor: 'purple.600' }}
                 leftIcon={<AddIcon />}>

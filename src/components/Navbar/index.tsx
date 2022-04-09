@@ -14,6 +14,7 @@ import {
     Stack,
     Heading,
     useColorMode,
+    useColorModeValue,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { NavLink } from './NavLink';
@@ -73,13 +74,13 @@ const Navbar = () => {
     const NavRight = () => {
         return (
             <Flex alignItems={'center'}>
-                {/* <Button
+                <Button
                     mr="4"
                     aria-label="Toggle Color Mode"
                     onClick={toggleColorMode}
                     _focus={{ boxShadow: 'none' }}>
                     {colorMode === 'light' ? <BsMoonStarsFill /> : <BsSun />}
-                </Button> */}
+                </Button>
 
                 <Menu>
                     <MenuButton
@@ -120,7 +121,7 @@ const Navbar = () => {
     };
 
     return (
-        <Box bg="gray.600" px={4} paddingX="12">
+        <Box bg={useColorModeValue('gray.100', 'gray.600')} px={4} paddingX="12">
             <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
                 <HamburgerMenu />
                 <NavLeft />

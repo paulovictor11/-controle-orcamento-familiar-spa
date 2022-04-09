@@ -1,5 +1,11 @@
-import { Button, Heading, Input, Text } from "@chakra-ui/react";
-import Card from "../../components/Card";
+import {
+    Button,
+    Heading,
+    Input,
+    Text,
+    useColorModeValue,
+} from '@chakra-ui/react';
+import Card from '../../components/Card';
 
 const UpdatePassword = () => {
     return (
@@ -8,28 +14,28 @@ const UpdatePassword = () => {
                 Alterar Senha
             </Heading>
 
-            <Text mb='8px'>Nova Senha:</Text>
+            <Text mb="8px">Nova Senha:</Text>
             <Input
                 height="45px"
-                backgroundColor="gray.800"
+                backgroundColor={useColorModeValue('gray.200', 'gray.800')}
                 focusBorderColor="purple.500"
                 borderRadius="sm"
                 placeholder="Senha"
                 mb={4}
             />
 
-            <Text mb='8px'>Confirmar Nova Senha:</Text>
+            <Text mb="8px">Confirmar Nova Senha:</Text>
             <Input
                 height="45px"
-                backgroundColor="gray.800"
+                backgroundColor={useColorModeValue('gray.200', 'gray.800')}
                 focusBorderColor="purple.500"
                 borderRadius="sm"
                 placeholder="Confirmar Senha"
             />
 
             <Button
-                as={'a'}
                 marginTop={6}
+                color={useColorModeValue('white', 'black')}
                 backgroundColor="purple.500"
                 width="150px"
                 borderRadius="sm"
@@ -39,6 +45,6 @@ const UpdatePassword = () => {
             </Button>
         </Card>
     );
-}
+};
 
 export default UpdatePassword;

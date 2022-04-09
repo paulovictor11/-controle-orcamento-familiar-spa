@@ -7,6 +7,7 @@ import {
     Input,
     Link as ChakraLink,
     Text,
+    useColorModeValue,
 } from '@chakra-ui/react';
 import Divider from '../src/components/Divider';
 import Head from 'next/head';
@@ -40,14 +41,14 @@ const SignIn: NextPage = () => {
                 <Flex
                     gridArea="form"
                     height="100%"
-                    backgroundColor="gray.700"
+                    backgroundColor={useColorModeValue('gray.100', 'gray.700')}
                     borderRadius="md"
                     flexDir="column"
                     alignItems="stretch"
                     padding={16}>
                     <Input
                         height="50px"
-                        backgroundColor="gray.800"
+                        backgroundColor={useColorModeValue('white', 'gray.800')}
                         focusBorderColor="purple.500"
                         borderRadius="sm"
                         placeholder="Email"
@@ -55,7 +56,7 @@ const SignIn: NextPage = () => {
 
                     <Input
                         height="50px"
-                        backgroundColor="gray.800"
+                        backgroundColor={useColorModeValue('white', 'gray.800')}
                         focusBorderColor="purple.500"
                         borderRadius="sm"
                         placeholder="Senha"
@@ -77,6 +78,7 @@ const SignIn: NextPage = () => {
                             as={'a'}
                             marginTop={6}
                             backgroundColor="purple.500"
+                            color={useColorModeValue('white', 'black')}
                             height="50px"
                             borderRadius="sm"
                             _hover={{ backgroundColor: 'purple.600' }}>
@@ -87,7 +89,7 @@ const SignIn: NextPage = () => {
                     <Text
                         textAlign="center"
                         fontSize="sm"
-                        color="gray.300"
+                        color={useColorModeValue('black', 'gray.300')}
                         marginTop={6}>
                         Não tem uma conta?{' '}
                         <Link href="/signup" passHref>
@@ -107,10 +109,16 @@ const SignIn: NextPage = () => {
                         <Button
                             height="50px"
                             flex="1"
-                            backgroundColor="gray.600"
+                            backgroundColor={useColorModeValue(
+                                'white',
+                                'gray.600'
+                            )}
                             marginLeft={6}
                             borderRadius="sm"
-                            _hover={{ backgroundColor: 'purple.500' }}
+                            _hover={{
+                                backgroundColor: 'purple.500',
+                                color: 'white',
+                            }}
                             leftIcon={<BsGoogle />}>
                             Google
                         </Button>

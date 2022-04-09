@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { NextPage } from 'next';
 import {
     Button,
     Flex,
@@ -7,11 +7,12 @@ import {
     Input,
     Link as ChakraLink,
     Text,
+    useColorModeValue,
 } from '@chakra-ui/react';
 import Divider from '../src/components/Divider';
 import Head from 'next/head';
-import Link from "next/link";
-import { BsGoogle } from "react-icons/bs";
+import Link from 'next/link';
+import { BsGoogle } from 'react-icons/bs';
 
 const SignUp: NextPage = () => {
     return (
@@ -40,7 +41,7 @@ const SignUp: NextPage = () => {
                 <Flex
                     gridArea="form"
                     height="100%"
-                    backgroundColor="gray.700"
+                    backgroundColor={useColorModeValue('gray.100', 'gray.700')}
                     borderRadius="md"
                     flexDir="column"
                     alignItems="stretch"
@@ -48,7 +49,7 @@ const SignUp: NextPage = () => {
                     paddingY={8}>
                     <Input
                         height="50px"
-                        backgroundColor="gray.800"
+                        backgroundColor={useColorModeValue('white', 'gray.800')}
                         focusBorderColor="purple.500"
                         borderRadius="sm"
                         placeholder="Nome"
@@ -56,7 +57,7 @@ const SignUp: NextPage = () => {
 
                     <Input
                         height="50px"
-                        backgroundColor="gray.800"
+                        backgroundColor={useColorModeValue('white', 'gray.800')}
                         focusBorderColor="purple.500"
                         borderRadius="sm"
                         placeholder="Email"
@@ -65,7 +66,7 @@ const SignUp: NextPage = () => {
 
                     <Input
                         height="50px"
-                        backgroundColor="gray.800"
+                        backgroundColor={useColorModeValue('white', 'gray.800')}
                         focusBorderColor="purple.500"
                         borderRadius="sm"
                         placeholder="Senha"
@@ -76,6 +77,7 @@ const SignUp: NextPage = () => {
                         <Button
                             as={'a'}
                             marginTop={6}
+                            color={useColorModeValue('white', 'black')}
                             backgroundColor="purple.500"
                             height="50px"
                             borderRadius="sm"
@@ -87,7 +89,7 @@ const SignUp: NextPage = () => {
                     <Text
                         textAlign="center"
                         fontSize="sm"
-                        color="gray.300"
+                        color={useColorModeValue('black', 'gray.300')}
                         marginTop={6}>
                         Já tem uma conta?{' '}
                         <Link href="/signin" passHref>
@@ -107,10 +109,16 @@ const SignUp: NextPage = () => {
                         <Button
                             height="50px"
                             flex="1"
-                            backgroundColor="gray.600"
+                            backgroundColor={useColorModeValue(
+                                'white',
+                                'gray.600'
+                            )}
                             marginLeft={6}
                             borderRadius="sm"
-                            _hover={{ backgroundColor: 'purple.500' }}
+                            _hover={{
+                                backgroundColor: 'purple.500',
+                                color: 'white',
+                            }}
                             leftIcon={<BsGoogle />}>
                             Google
                         </Button>
@@ -119,6 +127,6 @@ const SignUp: NextPage = () => {
             </Grid>
         </>
     );
-}
+};
 
 export default SignUp;
