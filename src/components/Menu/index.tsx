@@ -36,7 +36,7 @@ const Menu = () => {
                         <IconButton
                             aria-label="Search database"
                             backgroundColor="purple.500"
-                            color={useColorModeValue('white', 'black')}
+                            color="white"
                             _hover={{ backgroundColor: 'purple.600' }}
                             icon={<SearchIcon />}
                         />
@@ -47,8 +47,8 @@ const Menu = () => {
             <Button
                 ml="3"
                 backgroundColor="purple.500"
-                color={useColorModeValue('white', 'black')}
                 borderRadius="sm"
+                color="white"
                 _hover={{ backgroundColor: 'purple.600' }}
                 leftIcon={<AddIcon />}>
                 Cadastrar

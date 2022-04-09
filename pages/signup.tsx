@@ -77,7 +77,7 @@ const SignUp: NextPage = () => {
                         <Button
                             as={'a'}
                             marginTop={6}
-                            color={useColorModeValue('white', 'black')}
+                            color="white"
                             backgroundColor="purple.500"
                             height="50px"
                             borderRadius="sm"

@@ -35,10 +35,10 @@ const ProfileForm = () => {
 
             <Button
                 marginTop={6}
-                color={useColorModeValue('white', 'black')}
-                backgroundColor="purple.500"
                 width="150px"
                 borderRadius="sm"
+                color="white"
+                backgroundColor="purple.500"
                 _hover={{ backgroundColor: 'purple.600' }}
                 mt={8}>
                 Salvar

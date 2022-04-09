@@ -77,8 +77,8 @@ const SignIn: NextPage = () => {
                         <Button
                             as={'a'}
                             marginTop={6}
+                            color="white"
                             backgroundColor="purple.500"
-                            color={useColorModeValue('white', 'black')}
                             height="50px"
                             borderRadius="sm"
                             _hover={{ backgroundColor: 'purple.600' }}>

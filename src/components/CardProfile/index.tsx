@@ -33,10 +33,17 @@ const CardProfile = () => {
                         right: 3,
                     }}
                 />
-                <Heading textAlign={'center'} fontSize={'xl'} fontFamily={'body'}>
+                <Heading
+                    textAlign={'center'}
+                    fontSize={'xl'}
+                    fontFamily={'body'}>
                     Paulo Victor
                 </Heading>
-                <Text textAlign={'center'} fontWeight={600} color={'gray.500'} mb={4}>
+                <Text
+                    textAlign={'center'}
+                    fontWeight={600}
+                    color={'gray.500'}
+                    mb={4}>
                     @paulovictor11
                 </Text>
                 <Text
@@ -88,14 +95,17 @@ const CardProfile = () => {
                         fontSize={'sm'}
                         borderRadius="sm"
                         color={useColorModeValue('black', 'white')}
-                        _hover={{ backgroundColor: 'purple.600', color: useColorModeValue('white', 'black') }}>
+                        _hover={{
+                            backgroundColor: 'purple.600',
+                            color: useColorModeValue('white', 'black'),
+                        }}>
                         Mensagem
                     </Button>
                     <Button
                         flex={1}
                         fontSize={'sm'}
                         borderRadius="sm"
-                        color={useColorModeValue('white', 'black')}
+                        color="white"
                         backgroundColor="purple.500"
                         _hover={{ backgroundColor: 'purple.600' }}>
                         Seguir

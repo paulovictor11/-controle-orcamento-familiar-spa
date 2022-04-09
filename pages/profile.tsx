@@ -32,10 +32,10 @@ const Profile: NextPage = () => {
 
                             <Button
                                 marginTop={6}
-                                backgroundColor="red.500"
                                 width="150px"
                                 borderRadius="sm"
-                                color="black"
+                                color="white"
+                                backgroundColor="red.500"
                                 _hover={{ backgroundColor: 'red.600' }}
                                 mt={8}>
                                 Deletar
