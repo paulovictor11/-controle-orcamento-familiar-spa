@@ -26,18 +26,18 @@ const CardTable = () => {
             </Box>
             <Box h="20" width="1000px">
                 <TableItem
-                    title="Description"
+                    title="Descrição"
                     content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat rerum quisquam natus, quibusdam asperiores hic consectetur ipsum eveniet!"
                 />
             </Box>
             <Box h="20" width="150px">
-                <TableItem title="Value" content="$ 1.00" />
+                <TableItem title="Valor" content="$ 1.00" />
             </Box>
             <Box h="20" width="150px">
-                <TableItem title="Date" content="2022-04-02" />
+                <TableItem title="Data" content="2022-04-02" />
             </Box>
             <Box h="20" width="110px">
-                <Text fontSize="md">Actions</Text>
+                <Text fontSize="md">Ações</Text>
                 <Flex gap={2} pt="2">
                     <IconButton
                         size="sm"

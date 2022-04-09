@@ -30,9 +30,9 @@ const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
 
     const links: INavLink[] = [
-        { title: 'Resume', path: '/' },
-        { title: 'Incomes', path: '/incomes' },
-        { title: 'Expenses', path: '/expenses' },
+        { title: 'Resumo', path: '/' },
+        { title: 'Receitas', path: '/incomes' },
+        { title: 'Despesas', path: '/expenses' },
     ];
     const profileAvatar = 'https://github.com/paulovictor11.png';
 
@@ -92,12 +92,12 @@ const Navbar = () => {
                     </MenuButton>
                     <MenuList>
                         <Link href="/profile" passHref>
-                            <MenuItem as="a">My Profile</MenuItem>
+                            <MenuItem as="a">Meu Perfil</MenuItem>
                         </Link>
                         <MenuItem>...</MenuItem>
                         <MenuDivider />
                         <Link href="/signin" passHref>
-                            <MenuItem as="a">Logout</MenuItem>
+                            <MenuItem as="a">Sair</MenuItem>
                         </Link>
                     </MenuList>
                 </Menu>

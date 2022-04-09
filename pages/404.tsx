@@ -19,10 +19,10 @@ const NotFound: NextPage = () => {
                     404
                 </Heading>
                 <Text fontSize="18px" mt={3} mb={2}>
-                    Page Not Found
+                    Página não encontrada
                 </Text>
                 <Text color={'gray.500'} mb={6}>
-                    The page you&apos;re looking for does not seem to exist
+                    A página que você está procurando parece não existir.
                 </Text>
 
                 <Link href="/" passHref>
@@ -32,7 +32,7 @@ const NotFound: NextPage = () => {
                         bgGradient="linear(to-r, purple.400, purple.500, purple.600)"
                         color="white"
                         variant="solid">
-                        Go to Home
+                        Voltar para o início
                     </Button>
                 </Link>
             </Box>
