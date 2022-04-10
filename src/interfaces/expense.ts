@@ -1,6 +1,6 @@
-import { Link } from "./link";
+import { ILink } from "./link";
 
-export interface Expense {
+export interface IExpense {
     id: number;
     description: string;
     value: number;
@@ -9,18 +9,18 @@ export interface Expense {
     category: string
 }
 
-export interface ExpenseRequest {
+export interface IExpenseRequest {
     description: string;
     value: number;
     date: string;
     category_id: number;
 }
 
-export interface ExpenseResponse {
+export interface IExpenseResponse {
     current_page: number;
-    data: Expense[];
+    data: IExpense[];
     last_page_url: string;
-    links: Link[];
+    links: ILink[];
     next_page_url: string;
     total: number
 }

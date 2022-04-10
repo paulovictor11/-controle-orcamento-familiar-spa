@@ -1,11 +1,29 @@
 import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
-import { NextPage } from "next";
+import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
+import { parseCookies } from "nookies";
 import Card from "../src/components/Card";
 import CardProfile from "../src/components/CardProfile";
 import Navbar from "../src/components/Navbar";
 import ProfileForm from "../src/views/Profile/ProfileForm";
 import UpdatePassword from "../src/views/Profile/UpdatePassword";
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    const { token } = parseCookies(context);
+
+    if (Boolean(token) === false) {
+        return {
+            redirect: {
+                destination: '/signin',
+                permanent: false
+            }
+        };
+    }
+
+    return {
+        props: {}
+    }
+}
 
 const Profile: NextPage = () => {
     return (

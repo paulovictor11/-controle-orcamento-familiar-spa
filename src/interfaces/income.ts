@@ -1,19 +1,19 @@
-import { Link } from "./link";
+import { ILink } from "./link";
 
-export interface Income {
+export interface IIncome {
     id: number;
     description: string;
     value: number;
     date: string;
 }
 
-export interface IncomeRequest extends Omit<Income, 'id'> {}
+export interface IIncomeRequest extends Omit<IIncome, 'id'> {}
 
-export interface IncomeResponse {
+export interface IIncomeResponse {
     current_page: number;
-    data: Income[];
+    data: IIncome[];
     last_page_url: string;
-    links: Link[];
+    links: ILink[];
     next_page_url: string;
     total: number
 }

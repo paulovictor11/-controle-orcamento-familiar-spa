@@ -1,12 +1,12 @@
-interface ByCategory {
+interface IByCategory {
     id: number;
     name: string;
     total: number;
 }
 
-export interface Resume {
+export interface IResume {
     totalOfIncomes: number;
     totalOfExpenses: number;
     totalBalance: number;
-    totalByCategories: ByCategory[];
+    totalByCategories: IByCategory[];
 }

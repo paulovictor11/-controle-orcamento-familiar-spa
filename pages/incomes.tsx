@@ -10,14 +10,32 @@ import {
     Tr,
     useColorModeValue,
 } from '@chakra-ui/react';
-import { NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
+import { parseCookies } from 'nookies';
 import Card from '../src/components/Card';
 import Menu from '../src/components/Menu';
 import Navbar from '../src/components/Navbar';
 import DeleteForm from '../src/views/Form/delete';
 import EditForm from '../src/views/Form/edit';
 import InfoForm from '../src/views/Form/info';
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    const { token } = parseCookies(context);
+
+    if (Boolean(token) === false) {
+        return {
+            redirect: {
+                destination: '/signin',
+                permanent: false
+            }
+        };
+    }
+
+    return {
+        props: {}
+    }
+}
 
 const Incomes: NextPage = () => {
     return (
